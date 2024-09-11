@@ -1,0 +1,123 @@
+Version 1.1.9
+	Added:
+		- WP 6.3 compatibility
+
+	Fixed:
+		- Update plugins to their latest versions
+		- Theme styles
+
+	Changed:
+		- Update demo data
+
+	Removed:
+    	- ThemeREX Socials
+
+Version 1.1.8
+	Fixed:
+		- Import Essential Grid 3.0.17+ plugin
+		- Update plugins to their latest versions
+
+Version 1.1.7
+	Added:
+		- WP 6.1 compatibility
+
+	Fixed:
+		- Update plugins to their latest versions
+		- Theme styles
+
+	Changed:
+		- Update demo data
+
+Version 1.1.6
+	Added:
+		- WP 5.9.3 compatibility
+		- Smash Balloon Instagram Feed plugin
+
+	Fixed:
+		- Update plugins to their latest versions
+
+	Changed:
+		- Update demo data
+
+Version 1.1.5
+	Added:
+		- WP 5.8.2 compatibility
+		- PHP 8 compatibility
+		- ThemeREX Socials plugin
+
+	Fixed:
+		- Update plugins to their latest versions
+
+	Changed:
+		- Update demo data
+
+	Removed:
+		- Smash Balloon Instagram Feed plugin
+
+Version: 1.1.4
+	Added:
+		- WP 5.5.1 compatibility
+	Fixed:
+		- Theme styles
+		- Update plugins to their latest versions
+
+	Changed:
+		- Update demo data
+
+Version: 1.1.3
+	Added:
+		- WP 5.5 compatibility
+		- PHP 7.4 compatibility
+		- ThemeREX Updater plugin
+		- elegro Crypto Payment plugin
+
+	Fixed:
+		- Theme styles
+		- Update plugins to their latest versions
+
+	Changed:
+		- Content reassembled without using Layouts
+		- Update demo data
+
+Version: 1.1.2
+	Fixed:
+		- Improve PHP 7.3 compatibility
+		- Update plugins to the latest versions
+		- Update scripts libraries
+		- Improve theme styles
+
+Version 1.1.1
+	Added:
+		- Compatibility with WP 5.0.3
+		- Compatibility with PHP7.2
+		- Contact Form 7
+		- Alert to Demo data installation
+		- Privacy Policy page
+
+	Fixed:
+		- Compatibility with Gutenberg and other PageBuilders
+		- Update plugins to their latest versions
+		- Improve theme styles
+		- Scripts libraries updated
+
+	Changed:
+		- Update default contact forms to make them GDPR-compliant
+		- Update demo data
+
+Version 1.1
+	WordPress Version 4.9.2 ready
+	Compatibility with PHP7.1
+	Updated Revolution Slider to its latest version
+	Updated WPBakery Page Builder to its latest version
+	Updated Essential Grid to its latest version
+	Updated demo data
+	Fixed shortcode WPBakery Page Builder in PHP7.1
+	Fixed WooCommerce
+	Added new CSS styles
+
+Version 1.0.1
+	Fixed small shortcomings
+	Updated documentation
+
+Version 1.0
+	Release

@@ -1,0 +1,62 @@
+<?php
+//Custom Layouts
+$layouts = array(
+		'footer_17' => array(
+				'name' => 'Footer Standard Old',
+				'template' => '[vc_row row_type=\"normal\" row_delimiter=\"\" row_fixed=\"\" hide_on_tablet=\"\" hide_on_mobile=\"\" hide_on_frontpage=\"\" css=\".vc_custom_1515775796549{padding-top: 5.6em !important;padding-bottom: 1em !important;background-color: #ffffff !important;}\"][vc_column icons_position=\"left\"][trx_sc_content size=\"1_1\" number_position=\"br\" title_style=\"default\"][vc_row_inner row_delimiter=\"\"][vc_column_inner width=\"4/12\" icons_position=\"left\" css=\".vc_custom_1515776500487{padding-right: 5% !important;}\"][vc_column_text][trx_widget_contacts id=\"\" title=\"\" logo=\"/wp-content/uploads/2017/12/logo.png\" logo_retina=\"\" description=\"We design buildings and spaces that are elegant and authoritative. Our work reveals a knowing simplicity: fine and deliberate places that are complete when our clients occupy them. We design buildings and spaces.\" address=\"\" phone=\"\" email=\"\" socials=\"0|1\"][/vc_column_text][/vc_column_inner][vc_column_inner width=\"2/12\" icons_position=\"left\"][vc_wp_custommenu nav_menu=\"35\" title=\"About\"][/vc_column_inner][vc_column_inner width=\"2/12\" icons_position=\"left\"][vc_wp_custommenu nav_menu=\"36\" title=\"Office\"][/vc_column_inner][vc_column_inner width=\"4/12\" icons_position=\"left\"][vc_wp_text title=\"Stay Tuned for updates\"][mc4wp_form id=\"224\"]
+
+[trx_widget_socials][/vc_wp_text][/vc_column_inner][/vc_row_inner][/trx_sc_content][/vc_column][/vc_row][vc_row row_type=\"compact\" row_delimiter=\"\" row_fixed=\"\" hide_on_tablet=\"\" hide_on_mobile=\"\" hide_on_frontpage=\"\" css=\".vc_custom_1500387194305{padding-top: 1em !important;padding-bottom: 1em !important;background-color: #ffffff !important;}\"][vc_column icons_position=\"left\"][trx_sc_content size=\"1_1\" float=\"center\" number_position=\"br\" title_style=\"default\"][vc_wp_text]
+
+<a href=\"https://ancorathemes.com/\" target=\"_blank\" rel=\"noopener noreferrer\">AncoraThemes</a> &copy; {{Y}}. All Rights Reserved.
+
+[/vc_wp_text][/trx_sc_content][/vc_column][/vc_row]',
+				'meta' => array(
+						'trx_addons_options' => array(
+								'layout_type' => 'footer'
+								),
+						'_wpb_shortcodes_custom_css' => '.vc_custom_1515775796549{padding-top: 5.6em !important;padding-bottom: 1em !important;background-color: #ffffff !important;}.vc_custom_1500387194305{padding-top: 1em !important;padding-bottom: 1em !important;background-color: #ffffff !important;}.vc_custom_1515776500487{padding-right: 5% !important;}'
+						)
+				),
+		'header_21' => array(
+				'name' => 'Header Burger menu',
+				'template' => '<p>[vc_row content_placement=\"middle\" row_type=\"compact\" row_delimiter=\"1\" row_fixed=\"\" hide_on_tablet=\"\" hide_on_mobile=\"\" hide_on_frontpage=\"\"][vc_column width=\"1/3\" column_align=\"left\" icons_position=\"left\" column_type=\"center\"][trx_sc_layouts_logo][/vc_column][vc_column width=\"2/3\" column_align=\"right\" icons_position=\"left\"][trx_sc_layouts_iconed_text icon=\"icon-phone-1\" hide_on_mobile=\"1\" text1=\"(123)456-78-90\" link=\"tel:+1234567890\"][trx_sc_layouts_iconed_text icon=\"none\" hide_on_mobile=\"1\" text1=\"sales@yoursite.com\" link=\"mailto:sales@yoursite.com\" class=\"mailto\"][trx_sc_layouts_menu type=\"burger\" location=\"none\" menu=\"main-menu\" mobile_button=\"1\" mobile_menu=\"1\" burger=\"\" mobile=\"1\" stretch=\"\" mobile_hide=\"1\"][/vc_column][/vc_row][vc_row full_width=\"stretch_row\" scheme=\"dark\" row_type=\"normal\" row_delimiter=\"\" row_fixed=\"\" hide_on_tablet=\"\" hide_on_mobile=\"\" hide_on_frontpage=\"1\" css=\".vc_custom_1638108849778{background: #161616 url(https://palladio.ancorathemes.com/wp-content/uploads/2017/05/title-breadcrumbs-bg.jpg?id=364) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}\"][vc_column column_align=\"center\" icons_position=\"left\"][trx_sc_content size=\"1_1\" number_position=\"br\" title_style=\"default\"][trx_sc_layouts_title align=\"left\" title=\"1\" meta=\"1\" breadcrumbs=\"1\" use_featured_image=\"\" icon_type=\"fontawesome\" icon_fontawesome=\"\" image=\"364\"][/trx_sc_content][/vc_column][/vc_row]</p>
+',
+				'meta' => array(
+						'trx_addons_options' => array(
+								'layout_type' => 'header'
+								),
+						'_wpb_shortcodes_custom_css' => '.vc_custom_1638108849778{background: #161616 url(https://palladio.ancorathemes.com/wp-content/uploads/2017/05/title-breadcrumbs-bg.jpg?id=364) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}'
+						)
+				),
+		'header_29' => array(
+				'name' => 'Header Short /2 rows/',
+				'template' => '[vc_row scheme=\"dark\" row_type=\"narrow\" row_delimiter=\"\" row_fixed=\"\" hide_on_tablet=\"\" hide_on_mobile=\"1\" hide_on_frontpage=\"\" css=\".vc_custom_1504101111040{padding-right: 5.8rem !important;padding-left: 5.8rem !important;}\"][vc_column column_align=\"center\" icons_position=\"left\" column_type=\"center\"][vc_row_inner equal_height=\"yes\" content_placement=\"middle\"][vc_column_inner width=\"1/3\" column_align=\"left\" icons_position=\"left\"][vc_column_text]Architecture bureau[/vc_column_text][/vc_column_inner][vc_column_inner width=\"2/3\" column_align=\"right\" icons_position=\"left\"][trx_sc_layouts_iconed_text icon=\"icon-phone-1\" icon_type=\"fontawesome\" icon_fontawesome=\"icon-phone-2\" text2=\"(123)456-78-90\" css=\".vc_custom_1559646651364{padding-right: 0.5em !important;}\" link=\"tel:+1234567890\"][vc_column_text]<a href=\"/contacts/\">sales@yoursite.com</a>[/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row row_type=\"narrow\" row_delimiter=\"\" row_fixed=\"1\" hide_on_tablet=\"\" hide_on_mobile=\"\" hide_on_frontpage=\"\" css=\".vc_custom_1503583583329{padding-right: 5rem !important;padding-left: 5.8rem !important;}\"][vc_column icons_position=\"left\" column_type=\"center\"][vc_row_inner equal_height=\"yes\" content_placement=\"middle\"][vc_column_inner width=\"1/3\" column_align=\"left\" icons_position=\"left\"][trx_sc_layouts_logo][/vc_column_inner][vc_column_inner width=\"2/3\" column_align=\"right\" icons_position=\"left\"][trx_sc_layouts_menu location=\"none\" menu=\"main-menu\" hover=\"slide_line\" animation_in=\"fadeInUpSmall\" animation_out=\"fadeOutDownSmall\" mobile_button=\"1\" mobile_menu=\"1\" hide_on_mobile=\"1\" burger=\"\" mobile=\"1\" stretch=\"\" mobile_hide=\"1\"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row]',
+				'meta' => array(
+						'trx_addons_options' => array(
+								'layout_type' => 'header'
+								),
+						'_wpb_shortcodes_custom_css' => '.vc_custom_1504101111040{padding-right: 5.8rem !important;padding-left: 5.8rem !important;}.vc_custom_1503583583329{padding-right: 5rem !important;padding-left: 5.8rem !important;}.vc_custom_1559646651364{padding-right: 0.5em !important;}'
+						)
+				),
+		'header_507' => array(
+				'name' => 'Header Short /1 rows/',
+				'template' => '<p>[vc_row row_type=\"narrow\" row_delimiter=\"\" row_fixed=\"1\" hide_on_tablet=\"\" hide_on_mobile=\"\" hide_on_frontpage=\"\"][vc_column icons_position=\"left\" column_type=\"center\"][trx_sc_content size=\"1_1\" number_position=\"br\" title_style=\"default\"][vc_row_inner equal_height=\"yes\" content_placement=\"middle\" row_delimiter=\"\"][vc_column_inner width=\"1/3\" column_align=\"left\" icons_position=\"left\"][trx_sc_layouts_logo logo=\"541\"][/vc_column_inner][vc_column_inner width=\"2/3\" column_align=\"right\" icons_position=\"left\"][trx_sc_layouts_menu location=\"none\" menu=\"main-menu\" hover=\"slide_line\" animation_in=\"fadeInUpSmall\" animation_out=\"fadeOutDownSmall\" mobile_button=\"1\" mobile_menu=\"1\" hide_on_mobile=\"1\" burger=\"\" mobile=\"1\" stretch=\"\" mobile_hide=\"1\"][/vc_column_inner][/vc_row_inner][/trx_sc_content][/vc_column][/vc_row]</p>
+',
+				'meta' => array(
+						'trx_addons_options' => array(
+								'layout_type' => 'header'
+								)
+						)
+				),
+		'footer_580' => array(
+				'name' => 'Footer Standard',
+				'template' => '[vc_row row_type=\"normal\" row_delimiter=\"\" row_fixed=\"\" hide_on_tablet=\"\" hide_on_mobile=\"\" hide_on_frontpage=\"\" css=\".vc_custom_1515775796549{padding-top: 5.6em !important;padding-bottom: 1em !important;background-color: #ffffff !important;}\"][vc_column icons_position=\"left\"][trx_sc_content size=\"1_1\" number_position=\"br\" title_style=\"default\"][vc_row_inner row_delimiter=\"\"][vc_column_inner width=\"4/12\" icons_position=\"left\" css=\".vc_custom_1515776500487{padding-right: 5% !important;}\"][trx_widget_contacts columns=\"\" googlemap=\"\" socials=\"\" logo=\"542\" logo_retina=\"542\" description=\"We design buildings and spaces that are elegant and authoritative. Our work reveals a knowing simplicity: fine and deliberate places that are complete when our clients occupy them. We design buildings and spaces.\"][/trx_widget_contacts][/vc_column_inner][vc_column_inner width=\"2/12\" icons_position=\"left\"][vc_wp_custommenu nav_menu=\"35\" title=\"About\"][/vc_column_inner][vc_column_inner width=\"2/12\" icons_position=\"left\"][vc_wp_custommenu nav_menu=\"36\" title=\"Office\"][/vc_column_inner][vc_column_inner width=\"4/12\" icons_position=\"left\"][vc_wp_text title=\"Stay Tuned for updates\" nav_menu=\"35\"][/vc_wp_text][vc_column_text][mc4wp_form id=\"224\"][/vc_column_text][trx_widget_contacts columns=\"\" googlemap=\"\" socials=\"1\"][/trx_widget_contacts][/vc_column_inner][/vc_row_inner][/trx_sc_content][/vc_column][/vc_row][vc_row row_type=\"compact\" row_delimiter=\"\" row_fixed=\"\" hide_on_tablet=\"\" hide_on_mobile=\"\" hide_on_frontpage=\"\" css=\".vc_custom_1500387194305{padding-top: 1em !important;padding-bottom: 1em !important;background-color: #ffffff !important;}\"][vc_column icons_position=\"left\"][trx_sc_content size=\"1_1\" float=\"center\" number_position=\"br\" title_style=\"default\"][vc_wp_text]<a href=\"https://ancorathemes.com/\" target=\"_blank\" rel=\"noopener noreferrer\">AncoraThemes</a> &copy; {{Y}}. All Rights Reserved.[/vc_wp_text][/trx_sc_content][/vc_column][/vc_row]',
+				'meta' => array(
+						'trx_addons_options' => array(
+								'layout_type' => 'footer'
+								),
+						'_wpb_shortcodes_custom_css' => '.vc_custom_1515775796549{padding-top: 5.6em !important;padding-bottom: 1em !important;background-color: #ffffff !important;}.vc_custom_1500387194305{padding-top: 1em !important;padding-bottom: 1em !important;background-color: #ffffff !important;}.vc_custom_1515776500487{padding-right: 5% !important;}'
+						)
+				)
+		);
+?>

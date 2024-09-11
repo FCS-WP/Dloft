@@ -1,0 +1,113 @@
+/* Page content */
+.downloads_page_section {
+	margin-top: 3em;
+}
+.downloads_page_section_title {
+	margin: 0 0 1.25em;
+	padding-bottom: 1em;
+	border-bottom: 1px dashed #ddd;
+}
+.downloads_page_features_list > a {
+	display: inline-block;
+	vertical-align:top;
+	width: 33%;
+}
+@media (max-width: 959px) {
+	.downloads_page_features_list > a {
+		width: 50%;
+	}
+}
+@media (max-width: 479px) {
+	.downloads_page_features_list > a {
+		width: 100%;
+		display:block;
+	}
+}
+.downloads_page_label,
+.downloads_page_data {
+	display:inline-block;
+	vertical-align:top;
+}
+.downloads_page_data {
+	font-weight:bold;
+}
+div.downloads_page_features_list > a {
+	font-weight: 400;
+}
+.downloads_page_features_list > a:before {
+	content: '\e874';
+	font-family:'trx_addons_icons';
+	display: inline-block;
+	line-height:inherit;
+	margin: 0 0.5em 0 0;
+	color: #00a02b;
+}
+
+.single-download .edd_download_purchase_form {
+	margin: 3em 0 0.1em;
+}
+.single-download .edd_download_purchase_form .edd_purchase_submit_wrapper {
+	display: inline-block;
+	vertical-align:top;
+}
+
+
+/* Payment details */
+th+th.edd_receipt_payment_key {
+	text-transform: none;
+}
+
+/* Shortcode 'EDD Details' */
+.sc_edd_details {
+	padding: 1em;
+	border: 1px solid #ddd;
+	background-color:#f7f7f7;
+}
+.sc_edd_details .downloads_page_section {
+	margin: 0;
+}
+.sc_edd_details .downloads_page_section+.downloads_page_section {
+	margin-top: 1em;
+}
+.sc_edd_details .downloads_page_section_title,
+.sc_edd_details .downloads_page_features_list,
+.sc_edd_details .downloads_page_label,
+.sc_edd_details .downloads_page_data {
+	display: inline-block;
+	vertical-align:top;
+	-webkit-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.sc_edd_details .downloads_page_section_title,
+.sc_edd_details .downloads_page_label {
+	margin: 0;
+	padding: 0 1em 0 0;
+	border-bottom: none;
+	font-size: 1em;
+	font-weight:inherit;
+	line-height:inherit;
+	width: 40%;
+}
+.sc_edd_details .downloads_page_features_list,
+.sc_edd_details .downloads_page_data {
+	width: 60%;
+	font-weight:inherit;
+}
+.sc_edd_details .downloads_page_features_list > a {
+	display: block;
+	width: auto;
+}
+.sc_edd_details .downloads_page_features_list > a:before {
+	display:none;
+}
+.sc_edd_details .downloads_page_details .downloads_page_section_title {
+	display:none;
+}
+.sc_edd_details .downloads_page_details .downloads_page_features_list {
+	width: 100%;
+}
+.sc_edd_details .downloads_page_price {
+	font-weight: bold;
+	font-size: 1.25em;
+}

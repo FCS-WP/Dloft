@@ -1,0 +1,118 @@
+/* Theme Customizer styles */
+
+#customize-header-actions .button {
+	padding: 0 5px;
+	font-size: 12px;
+}
+#customize-header-actions .customize-action-reset {
+	float: right;
+	margin: 0 0 0 6px;
+	max-width: 50px;
+}
+
+#customize-header-actions .customize-action-refresh {
+	position: absolute;
+	z-index:1000;
+	left: 60px;
+	top: 10px;
+	max-width: 30px;
+}
+#customize-header-actions .customize-action-refresh:before {
+	margin: 0;
+}
+
+.customize-section-description-container > p {
+	font-style:italic;
+}
+
+div.customize-section-description,
+.customize-control-description {
+	font-size: 12px;
+	line-height: 18px;
+}
+.customize-control-info > label {
+	margin-top:2em !important;
+	padding: 0.8em 10px;
+	background-color: #fcfcfc;
+	color: #626467;
+	border-top: 1px solid #ddd !important;
+	border-bottom: 1px solid #ddd !important;
+	border-left: 4px solid #1e8cbe;
+	margin: 6px -12px;
+}
+.customize-control-info > label > .customize-control-title {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #fff;
+	font-weight: 400;
+	margin-bottom:0;
+}
+.customize-control-info > label > .customize-control-description {
+	margin-top:4px;
+}
+.customize-control-field-wrap {
+	display: block;
+	position:relative;
+}
+
+#customize-theme-controls li > label {
+	display:block;
+	margin-top: 0.5em;
+}
+
+#customize-theme-controls li:not(.customize-section-description-container):not(.customize-control-info) + li > label {
+	padding-top:0.8em;
+	border-top: 1px dotted #ddd;
+}
+
+.customize-control > label > label {
+	display:inline-block;
+	margin:0 1.3em 0 0;
+	padding:0;
+	border:none;
+}
+.customize-control > label > label > input[type="radio"] {
+	margin-right:0;
+}
+
+.customize-control-background img,
+.customize-control-cropped_image img,
+.customize-control-header img,
+.customize-control-image img,
+.customize-control-media img,
+.customize-control-upload img {
+	width: auto;
+}
+
+#customize-control-header_image .customize-control-description {
+	display:none;
+}
+
+/* Color scheme editor */
+.customize-control-scheme_editor .palladio_scheme_editor_type .palladio_scheme_editor_row_cell {
+	padding:0;
+}
+.customize-control-scheme_editor .palladio_scheme_editor_type .palladio_scheme_editor_row_cell:first-child {
+	width: 32%;
+}
+.customize-control-scheme_editor .palladio_scheme_editor_type .palladio_scheme_editor_row_cell_span {
+	width: 68%;
+}
+
+.customize-control-scheme_editor .palladio_scheme_editor_colors .palladio_scheme_editor_header_cell {
+	font-size: 10px;
+}
+.customize-control-scheme_editor .palladio_scheme_editor_colors .palladio_scheme_editor_row_cell,
+.customize-control-scheme_editor .palladio_scheme_editor_colors .palladio_scheme_editor_row_cell input {
+	font-size: 9px;
+	line-height:13px;
+}
+.customize-control-scheme_editor .palladio_scheme_editor_colors .palladio_scheme_editor_header_cell,
+.customize-control-scheme_editor .palladio_scheme_editor_colors .palladio_scheme_editor_row_cell {
+	width: 17%;
+	padding: 0;
+}
+.customize-control-scheme_editor .palladio_scheme_editor_colors .palladio_scheme_editor_header_cell:first-child,
+.customize-control-scheme_editor .palladio_scheme_editor_colors .palladio_scheme_editor_row_cell:first-child {
+	width: 15%;
+}
