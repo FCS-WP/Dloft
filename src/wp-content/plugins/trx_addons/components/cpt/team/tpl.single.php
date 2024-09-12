@@ -61,7 +61,7 @@ while ( have_posts() ) { the_post();
 			if (!empty($meta['brief_info'])) {
 				?>
 				<div class="team_member_brief_info">
-					<h5 class="team_member_brief_info_title"><?php esc_attr_e('Brief info', 'themerex'); ?></h5>
+					<h5 class="team_member_brief_info_title"><?php esc_attr_e('About', 'themerex'); ?></h5>
 					<div class="team_member_brief_info_text"><?php echo wpautop($meta['brief_info']); ?></div>
 				</div>
 				<?php
