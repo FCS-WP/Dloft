@@ -71,6 +71,7 @@ function category_posts_slider_shortcode($atts)
     <div class="category-slider">
         <?php foreach ($categories as $index => $category): ?>
             <div class="category-column <?php echo $index === 0 ? 'active' : ''; ?>" id="category-<?php echo esc_attr($category->term_id); ?>" data-category-id="<?php echo esc_attr($category->term_id); ?>">
+                <h3 class="category-title"><?php echo esc_html($category->name); ?></h3>
                 <ul class="posts-list">
                     <?php
                     $posts = get_posts(array(
