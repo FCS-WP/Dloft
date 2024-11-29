@@ -21,7 +21,7 @@ $transition-time: 0.3s;
       display: inline;
       text-align: center;
 
-      .category-menu-link {
+      .category-menu-item-inner  {
         text-decoration: none;
         color: $default-text-color;
         font-weight: bold;
@@ -32,6 +32,22 @@ $transition-time: 0.3s;
         &:hover {
           background-color: $hover-bg-color;
           color: $hover-text-color !important;
+          img{
+            filter: brightness(0) invert(1);
+            transition: filter 0.3s ease;
+          }
+        }
+        p{
+          margin-bottom: 0;
+        }
+      }
+      &.active {
+        .category-menu-item-inner {
+          background-color: $hover-bg-color;
+          color: $hover-text-color !important;
+          img{
+            filter: brightness(0) invert(1);
+          }
         }
       }
     }
@@ -117,5 +133,6 @@ $transition-time: 0.3s;
 
   &::before {
     color: $default-text-color !important;
+
   }
 }
