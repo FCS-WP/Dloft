@@ -1,9 +1,11 @@
 <?php
 
-function category_posts_slider_shortcode($atts) {
+
+function category_posts_slider_shortcode($atts)
+{
+
     wp_enqueue_style('slick-slider-css', THEME_URL . '-child' . '/assets/lib/slick/slick.css');
     wp_enqueue_style('slick-theme-css', THEME_URL . '-child' . '/assets/lib/slick/slick-theme.css');
-
     wp_enqueue_script('slick-slider-js', THEME_URL . '-child' . '/assets/lib/slick/slick.min.js', array('jquery'), null, true);
 
     wp_add_inline_script('slick-slider-js', "
@@ -11,7 +13,7 @@ function category_posts_slider_shortcode($atts) {
             $('.category-slider').slick({
                 slidesToShow: 4,
                 slidesToScroll: 1,
-                infinite: false,
+                infinite: true,
                 dots: true,
                 responsive: [
                     {
@@ -21,6 +23,19 @@ function category_posts_slider_shortcode($atts) {
                         }
                     }
                 ]
+            });
+
+
+            $('.category-menu-item').on('click', function() {
+                $('.category-menu-item').removeClass('active');
+                $(this).addClass('active');
+
+                var categoryId = $(this).data('category-id');
+
+                var slideIndex = $('.category-column[data-category-id=\"' + categoryId + '\"]').index();
+                if (slideIndex >= 0) {
+                    $('.category-slider').slick('slickGoTo', slideIndex);
+                }
             });
         });
     ");
@@ -36,13 +51,13 @@ function category_posts_slider_shortcode($atts) {
     }
 
     ob_start();
-    ?>
+?>
     <div class="category-menu">
         <ul class="category-menu-list">
-            <?php foreach ($categories as $category): ?>
+            <?php foreach ($categories as $index => $category): ?>
                 <?php $category_icon = get_term_meta($category->term_id, 'icon', true); ?>
-                <li class="category-menu-item">
-                    <div>
+                <li class="category-menu-item <?php echo $index === 0 ? 'active' : ''; ?>" data-category-id="<?php echo esc_attr($category->term_id); ?>">
+                    <div class="category-menu-item-inner">
                         <?php if ($category_icon): ?>
                             <img width="40" height="40" src="<?php echo esc_url($category_icon); ?>" alt="<?php echo esc_attr($category->name); ?>" class="category-icon">
                         <?php endif; ?>
@@ -54,8 +69,8 @@ function category_posts_slider_shortcode($atts) {
     </div>
 
     <div class="category-slider">
-        <?php foreach ($categories as $category): ?>
-            <div class="category-column" id="category-<?php echo esc_attr($category->term_id); ?>">
+        <?php foreach ($categories as $index => $category): ?>
+            <div class="category-column <?php echo $index === 0 ? 'active' : ''; ?>" id="category-<?php echo esc_attr($category->term_id); ?>" data-category-id="<?php echo esc_attr($category->term_id); ?>">
                 <ul class="posts-list">
                     <?php
                     $posts = get_posts(array(
@@ -86,10 +101,9 @@ function category_posts_slider_shortcode($atts) {
             </div>
         <?php endforeach; ?>
     </div>
-    <?php
+<?php
     return ob_get_clean();
 }
 
 add_shortcode('category_posts_slider', 'category_posts_slider_shortcode');
-
 ?>
