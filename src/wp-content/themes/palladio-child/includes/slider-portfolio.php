@@ -1,9 +1,6 @@
 <?php
-
-
 function category_posts_slider_shortcode($atts)
 {
-
     wp_enqueue_style('slick-slider-css', THEME_URL . '-child' . '/assets/lib/slick/slick.css');
     wp_enqueue_style('slick-theme-css', THEME_URL . '-child' . '/assets/lib/slick/slick-theme.css');
     wp_enqueue_script('slick-slider-js', THEME_URL . '-child' . '/assets/lib/slick/slick.min.js', array('jquery'), null, true);
@@ -15,6 +12,7 @@ function category_posts_slider_shortcode($atts)
                 slidesToScroll: 1,
                 infinite: true,
                 dots: true,
+                centerMode: false,
                 responsive: [
                     {
                         breakpoint: 768,
@@ -25,16 +23,15 @@ function category_posts_slider_shortcode($atts)
                 ]
             });
 
-
             $('.category-menu-item').on('click', function() {
                 $('.category-menu-item').removeClass('active');
                 $(this).addClass('active');
 
                 var categoryId = $(this).data('category-id');
+                var slideIndex = $('.category-slider .category-column[data-category-id=\"' + categoryId + '\"]').index();
 
-                var slideIndex = $('.category-column[data-category-id=\"' + categoryId + '\"]').index();
                 if (slideIndex >= 0) {
-                    $('.category-slider').slick('slickGoTo', slideIndex);
+                    $('.category-slider').slick('slickGoTo', slideIndex, false);
                 }
             });
         });
@@ -71,7 +68,7 @@ function category_posts_slider_shortcode($atts)
     <div class="category-slider">
         <?php foreach ($categories as $index => $category): ?>
             <div class="category-column <?php echo $index === 0 ? 'active' : ''; ?>" id="category-<?php echo esc_attr($category->term_id); ?>" data-category-id="<?php echo esc_attr($category->term_id); ?>">
-                <h3 class="category-title"><?php echo esc_html($category->name); ?></h3>
+                <div class="category-title"><p><?php echo esc_html($category->name); ?></p></div>
                 <ul class="posts-list">
                     <?php
                     $posts = get_posts(array(
@@ -107,4 +104,5 @@ function category_posts_slider_shortcode($atts)
 }
 
 add_shortcode('category_posts_slider', 'category_posts_slider_shortcode');
+
 ?>
