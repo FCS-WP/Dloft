@@ -6,35 +6,57 @@ function category_posts_slider_shortcode($atts)
     wp_enqueue_script('slick-slider-js', THEME_URL . '-child' . '/assets/lib/slick/slick.min.js', array('jquery'), null, true);
 
     wp_add_inline_script('slick-slider-js', "
-        jQuery(document).ready(function($) {
-            $('.category-slider').slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true,
-                centerMode: false,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1
-                        }
+    jQuery(document).ready(function($) {
+        $('.category-slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            dots: true,
+            infinite: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        infinite: true,
                     }
-                ]
-            });
-
-            $('.category-menu-item').on('click', function() {
-                $('.category-menu-item').removeClass('active');
-                $(this).addClass('active');
-
-                var categoryId = $(this).data('category-id');
-                var slideIndex = $('.category-slider .category-column[data-category-id=\"' + categoryId + '\"]').index();
-
-                if (slideIndex >= 0) {
-                    $('.category-slider').slick('slickGoTo', slideIndex, false);
                 }
-            });
+            ]
         });
+
+        $('.category-menu-item').on('click', function() {
+            $('.category-menu-item').removeClass('active');
+            $(this).addClass('active');
+            
+            var categoryId = $(this).data('category-id');
+            
+            var targetIndex = $('.category-column[data-category-id=\"' + categoryId + '\"]').eq(0).index();
+            var totalMenuItems = $('.category-menu-item').length;
+            var isLastMenu = $(this).index() === totalMenuItems - 1;
+            if ($(window).width() > 768) {
+                targetIndex += 4;
+            } else {
+             if (isLastMenu) {
+                    targetIndex += totalMenuItems -1 ; 
+                }else {
+                    targetIndex -= 1;
+                }
+            }
+            if (targetIndex >= 0) {
+                $('.category-slider').slick('slickGoTo', targetIndex);             
+                $('.category-column').removeClass('slick-current');
+                $('.category-column[data-category-id=\"' + categoryId + '\"]').addClass('slick-current');
+            }
+        });
+    
+        $('.category-slider').on('afterChange', function(event, slick, currentSlide){
+            $('.category-column').removeClass('slick-current');
+            
+            var currentCategory = $('.category-column').eq(currentSlide).data('category-id');
+            
+            $('.category-column[data-category-id=\"' + currentCategory + '\"]').addClass('slick-current');
+        });
+    
+    });
     ");
 
     $categories = get_categories(array(
@@ -44,7 +66,7 @@ function category_posts_slider_shortcode($atts)
     ));
 
     if (empty($categories)) {
-        return '<p>Không tìm thấy danh mục nào.</p>';
+        return '<p>No categories found.</p>';
     }
 
     ob_start();
@@ -68,7 +90,9 @@ function category_posts_slider_shortcode($atts)
     <div class="category-slider">
         <?php foreach ($categories as $index => $category): ?>
             <div class="category-column <?php echo $index === 0 ? 'active' : ''; ?>" id="category-<?php echo esc_attr($category->term_id); ?>" data-category-id="<?php echo esc_attr($category->term_id); ?>">
-                <div class="category-title"><p><?php echo esc_html($category->name); ?></p></div>
+                <div class="category-title">
+                    <p><?php echo esc_html($category->name); ?></p>
+                </div>
                 <ul class="posts-list">
                     <?php
                     $posts = get_posts(array(
@@ -92,7 +116,7 @@ function category_posts_slider_shortcode($atts)
                     <?php
                         }
                     } else {
-                        echo '<li>Không có bài viết.</li>';
+                        echo '<li>No posts found</li>';
                     }
                     ?>
                 </ul>
@@ -104,5 +128,4 @@ function category_posts_slider_shortcode($atts)
 }
 
 add_shortcode('category_posts_slider', 'category_posts_slider_shortcode');
-
 ?>
