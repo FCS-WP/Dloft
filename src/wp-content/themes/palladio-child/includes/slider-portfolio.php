@@ -98,6 +98,7 @@ function category_posts_slider_shortcode($atts)
                     $posts = get_posts(array(
                         'category' => $category->term_id,
                         'numberposts' => 3,
+                        'order'      => 'ASC',
                     ));
 
                     if (!empty($posts)) {
